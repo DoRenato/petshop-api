@@ -9,3 +9,5 @@ Só para teste, criei também algumas views:
 
 caminho/petshop/pet - exibe todos os pets cadastrados, também com a possibilidade de cadastrar um novo, editar ou apagar. Com os dados sendo puxados da api.
 caminho/petshop/pet/{{petId}} - edita o pet pelo seu Id.
+
+Também deixei uma copia da api no heroku, mas lá está com alguns erros e optei por continuar no host local mesmo. Em /petshop/services.py tem o caminho para ele, caso queiram testar. Segue o link https://qflashpetshop.herokuapp.com/ (Como foi so para testes, irei remover em breve :D)
