@@ -7,7 +7,7 @@ class Pet(models.Model):
     nome_pet = models.CharField(max_length=50)
     dono = models.CharField(max_length=50)
     raca = models.CharField(max_length=50)
-    data_nascimento = models.IntegerField()
+    datanascimento = models.IntegerField()
 
     def __str__(self):
         return self.petId
