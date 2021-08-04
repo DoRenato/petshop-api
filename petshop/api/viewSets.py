@@ -6,6 +6,7 @@ from .serializers import PetSerializer, PictureSerializer
 class PetViewSet(ModelViewSet):
     queryset = Pet.objects.all()
     serializer_class = PetSerializer
+    lookup_field = 'petId' # O recurso que a API irá buscar na url, sem esse campo o padrão é o id.
 
 
 class PictureViewSet(ModelViewSet):

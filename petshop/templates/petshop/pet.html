@@ -6,6 +6,7 @@
         <th>Dono</th>
         <th>Raça</th>
         <th>Data de Nascimento</th>
+        <th>Foto</th>
         <th>ID do Pet</th>
         <th colspan="2">Ações</th>
     </tr>
@@ -15,6 +16,7 @@
             <td>{{i.dono}}</td>
             <td>{{i.raca}}</td>
             <td>{{i.nascimento}}</td>
+            <td><a href="#">Foto</a></td>
             <td>{{i.petId}}</td>
             <td><a href="{% url 'edit_pet' i.petId %}">Editar</a></td>
             <td><a href="{% url 'delete_pet' i.petId %}">Excluir</a></td>
