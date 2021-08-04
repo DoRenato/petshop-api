@@ -3,7 +3,7 @@ from requests.api import get
 
 
 def get_pets():
-    url = 'http://localhost:8000/api'
+    url = 'https://qflashpetshop.herokuapp.com'
     r = requests.get("{}/pet".format(url))
     pets = r.json()
     return pets

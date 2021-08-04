@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['qflashpetshop.herokuapp.com','localhost:8000']
+ALLOWED_HOSTS = ['qflashpetshop.herokuapp.com','localhost']
 
 
 # Application definition
