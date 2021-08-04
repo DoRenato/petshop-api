@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'dbbackup',
     'petshop',
 ]
 
@@ -133,4 +134,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/picture/'
 MEDIA_ROOT = (os.path.join(BASE_DIR, 'picture'))
 
+APPEND_SLASH = True #Pode apagar se quiser
+
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage' #o que salvar
+DBBACKUP_STORAGE_OPTIONS = {'location': 'backups/'} # onde salvar
 

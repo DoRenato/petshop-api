@@ -1,0 +1,11 @@
+caminho = http://localhost:8000
+
+caminho/pet - é onde está a api com todos os pets cadastrados, com a possibilidade de adicionar um novo. 
+caminho/pet/{{petId}} - edita o pet pelo seu id ou exclui.
+caminho/picture - se encontram todas as imagens com chave para o id do pet.
+caminho/dump - faz um backup do banco, salvando na pasta 'backups' que se encontra na raiz do projeto. Infezlimente não consegui fazer de uma forma para incluir as imagens, apenas seus caminhos.
+
+Só para teste, criei também algumas views:
+
+caminho/petshop/pet - exibe todos os pets cadastrados, também com a possibilidade de cadastrar um novo, editar ou apagar. Com os dados sendo puxados da api.
+caminho/petshop/pet/{{petId}} - edita o pet pelo seu Id.

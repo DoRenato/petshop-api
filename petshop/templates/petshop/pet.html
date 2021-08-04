@@ -16,7 +16,7 @@
             <td>{{i.dono}}</td>
             <td>{{i.raca}}</td>
             <td>{{i.nascimento}}</td>
-            <td><a href="#">Foto</a></td>
+            <td><a href="#">{{i.id}}</a></td>
             <td>{{i.petId}}</td>
             <td><a href="{% url 'edit_pet' i.petId %}">Editar</a></td>
             <td><a href="{% url 'delete_pet' i.petId %}">Excluir</a></td>

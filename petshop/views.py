@@ -1,13 +1,16 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
+import os
 from .models import *
 from .services import *
-from .forms import PetForm
+from .forms import PetForm, PictureForm
 
 # Create your views here.
 
 def pet(request):
     pet = get_pets() # função onde busca os pets na api, arquivo services.py
-    # pictures = get_pictures()
+    pictures = get_pictures()
+    # form = PictureForm(request.POST or None)
     if request.method == 'POST':
         novopet={}
         novopet['petId'] = request.POST['petId']
@@ -18,7 +21,7 @@ def pet(request):
         post_pet(novopet)
         return redirect('pet')
     else:
-        return render(request, 'petshop/pet.html', {'pet':pet})
+        return render(request, 'petshop/pet.html', {'pet':pet, 'pictures':pictures})
 
 
 def edit_pet(request, petId):
@@ -40,17 +43,8 @@ def delete_pet(request, petId):
     del_pet(petId)
     return redirect('pet')
 
-# def edit_pet(request, petId):
-#     pet = Pet.objects.get(petId=petId)
-#     form = PetForm(request.POST or None, instance=pet)
-#     if request.method == 'POST':
-#         form.save()
-#         return redirect('pet')
-#     else:
-#         return render(request, 'petshop/edit_pet.html', {'pet':pet, 'form':form})
 
-# def delete_pet(request, petId):
-#     pet = Pet.objects.get(petId=petId)
-#     pet.delete()
-#     return redirect('pet')
+def dump(request):
+    p = os.system('python manage.py dbbackup')
+    return HttpResponse("Ok")
     
