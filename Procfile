@@ -1,1 +1,1 @@
-web: gunicorn qflash.wsgi
+web: gunicorn qflash.wsgi --log-file -
