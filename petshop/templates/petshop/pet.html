@@ -14,7 +14,7 @@
             <td>{{i.nome_pet}}</td>
             <td>{{i.dono}}</td>
             <td>{{i.raca}}</td>
-            <td>{{i.data_nascimento}}</td>
+            <td>{{i.nascimento}}</td>
             <td>{{i.petId}}</td>
             <td><a href="{% url 'edit_pet' i.petId %}">Editar</a></td>
             <td><a href="{% url 'delete_pet' i.petId %}">Excluir</a></td>
@@ -26,8 +26,22 @@
 
 <br><br>
 <h2>Novo Pet:</h2>
-<form method="POST">
+<form method="POST" >
     {% csrf_token %}
-    {{form.as_p}}
+    <label for="petId">ID do Pet</label>
+    <input type="text" id="petId" name="petId"> 
+    <p></p>
+    <label for="nome">Nome do Pet</label>
+    <input type="text" id="nome" name="nome">
+    <p></p>
+    <label for="dono">Dono</label>
+    <input type="text" id="dono" name="dono">
+    <p></p>
+    <label for="raca">Raça</label>
+    <input type="text" id="raca" name="raca">
+    <p></p>
+    <label for="nasc">Nascimento</label>
+    <input type="number" id="nasc" name="nasc">
+    <p></p>
     <input type="submit">
 </form>
